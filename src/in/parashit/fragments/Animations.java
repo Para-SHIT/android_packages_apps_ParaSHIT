@@ -23,6 +23,7 @@ import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.widget.Toast;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
@@ -36,11 +37,15 @@ public class Animations extends SettingsPreferenceFragment
     private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
     private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
     private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
+    private static final String PREF_TOAST_ANIMATION = "toast_animation";
 
     private ListPreference mPowerMenuAnimation;
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
     private ListPreference mTileAnimationInterpolator;
+    private ListPreference mToastAnimation;
+
+    Toast mToast;
 
     @Override
     protected int getMetricsCategory() {
@@ -86,6 +91,19 @@ public class Animations extends SettingsPreferenceFragment
         mTileAnimationInterpolator.setSummary(mTileAnimationInterpolator.getEntry());
         mTileAnimationInterpolator.setEnabled(tileAnimationStyle > 0);
         mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
+
+        mToastAnimation = (ListPreference) findPreference(PREF_TOAST_ANIMATION);
+        mToastAnimation.setSummary(mToastAnimation.getEntry());
+        int CurrentToastAnimation = Settings.System.getInt(resolver,
+                Settings.System.TOAST_ANIMATION, 1);
+        mToastAnimation.setValueIndex(CurrentToastAnimation); //set to index of default value
+        mToastAnimation.setSummary(mToastAnimation.getEntries()[CurrentToastAnimation]);
+        mToastAnimation.setOnPreferenceChangeListener(this);
+
+        if (mToast != null) {
+            mToast.cancel();
+            mToast = null;
+        }
     }
 
     @Override
@@ -125,6 +143,18 @@ public class Animations extends SettingsPreferenceFragment
                     Settings.System.ANIM_TILE_INTERPOLATOR, value,
                     UserHandle.USER_CURRENT);
             mTileAnimationInterpolator.setSummary(mTileAnimationInterpolator.getEntries()[index]);
+            return true;
+        } else if (preference == mToastAnimation) {
+            index = mToastAnimation.findIndexOfValue((String) newValue);
+            Settings.System.putInt(resolver,
+                    Settings.System.TOAST_ANIMATION, index);
+            mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
+            if (mToast != null) {
+                mToast.cancel();
+            }
+            mToast = Toast.makeText(getActivity(), mToastAnimation.getEntries()[index],
+                    Toast.LENGTH_SHORT);
+            mToast.show();
             return true;
         }
         return false;
