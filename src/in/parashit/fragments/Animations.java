@@ -18,6 +18,8 @@ package in.parashit.fragments;
 
 import android.content.ContentResolver;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 
@@ -28,6 +30,10 @@ import com.android.settings.SettingsPreferenceFragment;
 
 public class Animations extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
+
+    private static final String POWER_MENU_ANIMATION = "power_menu_animation";
+
+    private ListPreference mPowerMenuAnimation;
 
     @Override
     protected int getMetricsCategory() {
@@ -40,10 +46,28 @@ public class Animations extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.animations_settings);
 
         ContentResolver resolver = getActivity().getContentResolver();
+
+        mPowerMenuAnimation = (ListPreference) findPreference(POWER_MENU_ANIMATION);
+        int powerMenuAnimation = Settings.System.getInt(resolver,
+                Settings.System.POWER_MENU_ANIMATION, 0);
+        mPowerMenuAnimation.setValue(String.valueOf(powerMenuAnimation));
+        mPowerMenuAnimation.setSummary(mPowerMenuAnimation.getEntry());
+        mPowerMenuAnimation.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return true;
+        int value;
+        int index;
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mPowerMenuAnimation) {
+            value = Integer.parseInt((String) newValue);
+            index = mPowerMenuAnimation.findIndexOfValue((String) newValue);
+            Settings.System.putInt(resolver,
+                    Settings.System.POWER_MENU_ANIMATION, value);
+            mPowerMenuAnimation.setSummary(mPowerMenuAnimation.getEntries()[index]);
+            return true;
+        }
+        return false;
     }
 }
