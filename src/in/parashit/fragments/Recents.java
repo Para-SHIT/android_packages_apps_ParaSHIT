@@ -18,6 +18,8 @@ package in.parashit.fragments;
 
 import android.content.ContentResolver;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 
@@ -28,6 +30,10 @@ import com.android.settings.SettingsPreferenceFragment;
 
 public class Recents extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
+
+    private static final String IMMERSIVE_RECENTS = "immersive_recents";
+
+    private ListPreference mImmersiveRecents;
 
     @Override
     protected int getMetricsCategory() {
@@ -40,10 +46,24 @@ public class Recents extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.recents_settings);
 
         ContentResolver resolver = getActivity().getContentResolver();
+
+        mImmersiveRecents = (ListPreference) findPreference(IMMERSIVE_RECENTS);
+        mImmersiveRecents.setValue(String.valueOf(Settings.System.getInt(
+                resolver, Settings.System.IMMERSIVE_RECENTS, 0)));
+        mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
+        mImmersiveRecents.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return true;
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mImmersiveRecents) {
+            Settings.System.putInt(resolver, Settings.System.IMMERSIVE_RECENTS,
+                    Integer.parseInt((String) newValue));
+            mImmersiveRecents.setValue((String) newValue);
+            mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
+            return true;
+        }
+        return false;
     }
 }
