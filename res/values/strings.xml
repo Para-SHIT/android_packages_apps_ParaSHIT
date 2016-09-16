@@ -203,4 +203,8 @@
     <string name="smartbar_config_restore_error_toast">Error restoring Smartbar profile</string>
     <string name="navbar_buttons_alpha_title">Button transparency</string>
 
+    <!-- WiFi easy toggle  -->
+    <string name="qs_wifi_easy_toggle_title">WiFi easy toggle</string>
+    <string name="qs_wifi_easy_toggle_summary">One click will turn WiFi on or off instead of taking you to details view</string>
+
 </resources>
