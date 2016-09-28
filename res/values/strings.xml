@@ -364,6 +364,10 @@
     <string name="toast_SlideLeftRight_animation">Slide left to right</string>
     <string name="toast_SlideRightLeft_animation">Slide right to left</string>
 
+    <!-- Toast Icons -->
+    <string name="toast_icon_title">Toast icon</string>
+    <string name="toast_icon_summary">Display the app icon corresponding with the toast</string>
+
     <!-- XOSP Blur personalizations -->
     <string name="blur_settings_title">Blur personalizations</string>
     <string name="blurred_status_bar_expanded_enabled_pref">Blur status bar background</string>
