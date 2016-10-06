@@ -24,6 +24,8 @@
     <string name="recents_settings_title">Recents</string>
     <string name="animations_settings_title">Animations</string>
     <string name="omniswitch_settings_title">OmniSwitch</string>
+    <string name="various_shit_title">Various shit</string>
+    <string name="print_restart">Restart</string>
 
     <!-- Tabs -->
     <string name="ui_tab">Interface</string>
@@ -34,6 +36,11 @@
     <!-- Categories -->
     <string name="qs_header_category">Header options</string>
     <string name="qs_tiles_toggles_category">Tiles &amp; toggles</string>
+
+    <!-- SystemUI restart prompt -->
+    <string name="systemui_restart_title">WARNING</string>
+    <string name="systemui_restart_message">SystemUI will be restarted so that selected setting can be applied correctly.</string>
+    <string name="restarting_ui">Restarting UI\u2026</string>
 
     <!-- Color Picker -->
     <string name="press_color_to_apply">Press on color below to apply</string>
