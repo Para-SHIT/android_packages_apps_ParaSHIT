@@ -27,4 +27,10 @@
         android:layout="@layout/preference_recents"
         android:fragment="in.parashit.fragments.Recents" />
 
+    <PreferenceScreen
+        android:key="omniswitch_recents"
+        android:title="@string/omniswitch_recents_title"
+        android:layout="@layout/preference_omniswitch"
+        android:fragment="in.parashit.fragments.OmniSwitch" />
+
 </PreferenceScreen>

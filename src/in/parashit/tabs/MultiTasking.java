@@ -20,15 +20,22 @@ package in.parashit.tabs;
 import android.content.ContentResolver;
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
+import com.android.internal.util.parashit.PackageUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 public class MultiTasking extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
+
+    private static final String OMNISWITCH_RECENTS = "omniswitch_recents";
+    private static final String OMNISWITCH_PACKAGE = "org.omnirom.omniswitch";
+
+    private PreferenceScreen mOmniSwitch;
 
     @Override
     protected int getMetricsCategory() {
@@ -41,6 +48,12 @@ public class MultiTasking extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.multitasking);
 
         ContentResolver resolver = getActivity().getContentResolver();
+        PreferenceScreen prefSet = getPreferenceScreen();
+
+        mOmniSwitch = (PreferenceScreen) findPreference(OMNISWITCH_RECENTS);
+        if (mOmniSwitch != null && !isOmniSwitchInstalled()) {
+            prefSet.removePreference(mOmniSwitch);
+        }
     }
 
     @Override
@@ -55,5 +68,9 @@ public class MultiTasking extends SettingsPreferenceFragment
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         return true;
+    }
+
+    private boolean isOmniSwitchInstalled() {
+        return PackageUtils.isAvailableApp(OMNISWITCH_PACKAGE, getActivity());
     }
 }
