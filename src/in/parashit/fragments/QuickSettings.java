@@ -27,8 +27,18 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import in.parashit.preference.SeekBarPreference;
+
 public class QuickSettings extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
+
+    private static final String PREF_ROWS_PORTRAIT = "qs_rows_portrait";
+    private static final String PREF_ROWS_LANDSCAPE = "qs_rows_landscape";
+    private static final String PREF_COLUMNS = "qs_columns";
+
+    private SeekBarPreference mRowsPortrait;
+    private SeekBarPreference mRowsLandscape;
+    private SeekBarPreference mQsColumns;
 
     @Override
     protected int getMetricsCategory() {
@@ -41,10 +51,47 @@ public class QuickSettings extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.qs_settings);
 
         ContentResolver resolver = getActivity().getContentResolver();
+
+        mRowsPortrait = (SeekBarPreference) findPreference(PREF_ROWS_PORTRAIT);
+        int rowsPortrait = Settings.Secure.getInt(resolver,
+                Settings.Secure.QS_ROWS_PORTRAIT, 3);
+        mRowsPortrait.setValue(rowsPortrait);
+        mRowsPortrait.setOnPreferenceChangeListener(this);
+
+        mRowsLandscape = (SeekBarPreference) findPreference(PREF_ROWS_LANDSCAPE);
+        int defaultValue = getResources().getInteger(com.android.internal.R.integer.config_qs_num_rows_landscape_default);
+        int rowsLandscape = Settings.Secure.getInt(resolver,
+                Settings.Secure.QS_ROWS_LANDSCAPE, defaultValue);
+        mRowsLandscape.setValue(rowsLandscape);
+        mRowsLandscape.setOnPreferenceChangeListener(this);
+
+        mQsColumns = (SeekBarPreference) findPreference(PREF_COLUMNS);
+        int columnsQs = Settings.Secure.getInt(resolver,
+                Settings.Secure.QS_COLUMNS, 3);
+        mQsColumns.setValue(columnsQs);
+        mQsColumns.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return true;
+        int intValue;
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mRowsPortrait) {
+            intValue = (Integer) newValue;
+            Settings.Secure.putInt(resolver,
+                    Settings.Secure.QS_ROWS_PORTRAIT, intValue);
+            return true;
+        } else if (preference == mRowsLandscape) {
+            intValue = (Integer) newValue;
+            Settings.Secure.putInt(resolver,
+                    Settings.Secure.QS_ROWS_LANDSCAPE, intValue);
+            return true;
+        } else if (preference == mQsColumns) {
+            intValue = (Integer) newValue;
+            Settings.Secure.putInt(resolver,
+                    Settings.Secure.QS_COLUMNS, intValue);
+            return true;
+        }
+        return false;
     }
 }
