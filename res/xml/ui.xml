@@ -21,4 +21,10 @@
     android:title="@string/ui_tab"
     android:layout="@layout/tab">
 
+    <PreferenceScreen
+        android:key="navbar_settings"
+        android:title="@string/navbar_settings_title"
+        android:layout="@layout/preference_navbar"
+        android:fragment="in.parashit.fragments.NavbarSettings" />
+
 </PreferenceScreen>
