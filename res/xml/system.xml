@@ -27,4 +27,10 @@
         android:layout="@layout/preference_animations"
         android:fragment="in.parashit.fragments.Animations" />
 
+    <PreferenceScreen
+        android:key="blur_personalizations"
+        android:title="@string/blur_settings_title"
+        android:layout="@layout/preference_blur"
+        android:fragment="in.parashit.fragments.BlurPersonalizations" />
+
 </PreferenceScreen>

@@ -364,4 +364,33 @@
     <string name="toast_SlideLeftRight_animation">Slide left to right</string>
     <string name="toast_SlideRightLeft_animation">Slide right to left</string>
 
+    <!-- XOSP Blur personalizations -->
+    <string name="blur_settings_title">Blur personalizations</string>
+    <string name="blurred_status_bar_expanded_enabled_pref">Blur status bar background</string>
+    <string name="blurred_status_bar_expanded_enabled_pref_summary">Blur the background when you pull down the status bar</string>
+    <string name="translucent_notifications_pref">Translucent notifications</string>
+    <string name="translucent_notifications_pref_summary">Set the background of notifications translucent</string>
+    <string name="translucent_quick_settings_pref">Translucent quick settings</string>
+    <string name="translucent_quick_settings_pref_summary">Make qs panel background transparent</string>
+    <string name="transluency_level_universal">Translucency level</string>
+    <string name="blurred_recent_app_enabled_pref">Blur recents background</string>
+    <string name="blurred_recent_app_enabled_pref_summary">Background of recents apps list gets blurred</string>
+    <string name="blur_light_color">Light image color filter</string>
+    <string name="blur_dark_color">Dark image color filter</string>
+    <string name="blur_mixed_color">Mixed image color filter</string>
+    <string name="blur_colors_notice">What are these colors doing?</string>
+    <string name="blur_colors_notice_summary">These colors are the ones tinting the BlurBackground. Instead of the normal Grey, you can now choose the colors in the way you like.\nThere are three color filters: One used for light backgrounds, one used for Dark backgrounds and one used for light/dark backgrounds.\nSo how these colors work?\nSimple, as the titles say, the Light filter will be used for Lighter backgrounds, Dark filter for dark backgrounds and the mixed filter one will be used for backgrounds not too dark but neither too light.\nThese colors are used for both BlurBackgrounds: StatusBar and RecentsApps window</string>
+    <string name="blur_colors_reset_message">Reset all colors to default?</string>
+    <string name="blur_notice">Notice</string>
+    <string name="blur_notice_summary">Blur personalizations are automatically disabled during Keyguard view!</string>
+    <string name="blur_expstatus_cat">Expanded status bar</string>
+    <string name="blur_notifications_cat">Notifications</string>
+    <string name="blur_qs_cat">Quick settings</string>
+    <string name="blur_recents_cat">Recent apps</string>
+    <string name="blur_colors_cat">Blur color filters</string>
+    <string name="blurred_scale">Blur scale</string>
+    <string name="blurred_scale_summary">Quality of blur image</string>
+    <string name="blurred_radius">Blur radius</string>
+    <string name="blurred_radius_summary">Amount of blur</string>
+
 </resources>
