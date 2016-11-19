@@ -99,7 +99,10 @@ public class IconPackGridActivity extends Activity {
             finish();
         }
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        if (getActionBar() != null) {
+            getActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
         setContentView(R.layout.icon_picker_grid);
 
         // Get memory class of this device, exceeding this amount will throw an
