@@ -67,6 +67,13 @@
             android:summary="@string/qqs_scroll_summary"
             android:defaultValue="false"/>
 
+        <in.parashit.preference.SystemSettingSwitchPreference
+            android:key="qs_tile_title_visibility"
+            android:title="@string/qs_tile_labels"
+            android:summaryOn="@string/qs_tile_labels_summaryOn"
+            android:summaryOff="@string/qs_tile_labels_summaryOff"
+            android:defaultValue="true" />
+
         <in.parashit.preference.SecureSettingSwitchPreference
             android:key="qs_bt_easy_toggle"
             android:title="@string/qs_bt_easy_toggle_title"
