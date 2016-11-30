@@ -23,6 +23,11 @@
         android:key="qs_header"
         android:title="@string/qs_header_category" >
 
+        <PreferenceScreen
+            android:key="qs_header_icons"
+            android:fragment="in.parashit.fragments.QSHeaderIcons"
+            android:title="@string/qs_header_icons_category" />
+
         <in.parashit.preference.SystemSettingSwitchPreference
             android:key="status_bar_custom_header"
             android:title="@string/status_bar_custom_header_title"
