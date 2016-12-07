@@ -18,6 +18,7 @@ package in.parashit.fragments;
 
 import android.content.ContentResolver;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
@@ -32,8 +33,10 @@ public class Recents extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
 
     private static final String IMMERSIVE_RECENTS = "immersive_recents";
+    private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
 
     private ListPreference mImmersiveRecents;
+    private ListPreference mRecentsClearAllLocation;
 
     @Override
     protected int getMetricsCategory() {
@@ -52,6 +55,14 @@ public class Recents extends SettingsPreferenceFragment
                 resolver, Settings.System.IMMERSIVE_RECENTS, 0)));
         mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
         mImmersiveRecents.setOnPreferenceChangeListener(this);
+
+        mRecentsClearAllLocation = (ListPreference) findPreference(RECENTS_CLEAR_ALL_LOCATION);
+        int location = Settings.System.getIntForUser(resolver,
+                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 4,
+                UserHandle.USER_CURRENT);
+        mRecentsClearAllLocation.setValue(String.valueOf(location));
+        mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntry());
+        mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -62,6 +73,14 @@ public class Recents extends SettingsPreferenceFragment
                     Integer.parseInt((String) newValue));
             mImmersiveRecents.setValue((String) newValue);
             mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
+            return true;
+        } else if (preference == mRecentsClearAllLocation) {
+            int location = Integer.parseInt((String) newValue);
+            int index = mRecentsClearAllLocation.findIndexOfValue((String) newValue);
+            Settings.System.putIntForUser(resolver,
+                    Settings.System.RECENTS_CLEAR_ALL_LOCATION, location,
+                    UserHandle.USER_CURRENT);
+            mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
             return true;
         }
         return false;
