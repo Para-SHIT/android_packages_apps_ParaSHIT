@@ -34,11 +34,13 @@ public class QuickSettings extends SettingsPreferenceFragment
 
     private static final String PREF_ROWS_PORTRAIT = "qs_rows_portrait";
     private static final String PREF_ROWS_LANDSCAPE = "qs_rows_landscape";
-    private static final String PREF_COLUMNS = "qs_columns";
+    private static final String PREF_COLUMNS_PORTRAIT = "qs_columns_portrait";
+    private static final String PREF_COLUMNS_LANDSCAPE = "qs_columns_landscape";
 
     private SeekBarPreference mRowsPortrait;
     private SeekBarPreference mRowsLandscape;
-    private SeekBarPreference mQsColumns;
+    private SeekBarPreference mQsColumnsPortrait;
+    private SeekBarPreference mQsColumnsLandscape;
 
     @Override
     protected int getMetricsCategory() {
@@ -65,11 +67,17 @@ public class QuickSettings extends SettingsPreferenceFragment
         mRowsLandscape.setValue(rowsLandscape);
         mRowsLandscape.setOnPreferenceChangeListener(this);
 
-        mQsColumns = (SeekBarPreference) findPreference(PREF_COLUMNS);
-        int columnsQs = Settings.Secure.getInt(resolver,
-                Settings.Secure.QS_COLUMNS, 3);
-        mQsColumns.setValue(columnsQs);
-        mQsColumns.setOnPreferenceChangeListener(this);
+        mQsColumnsPortrait = (SeekBarPreference) findPreference(PREF_COLUMNS_PORTRAIT);
+        int columnsQsPortrait = Settings.Secure.getInt(resolver,
+                Settings.Secure.QS_COLUMNS_PORTRAIT, 3);
+        mQsColumnsPortrait.setValue(columnsQsPortrait);
+        mQsColumnsPortrait.setOnPreferenceChangeListener(this);
+
+        mQsColumnsLandscape = (SeekBarPreference) findPreference(PREF_COLUMNS_LANDSCAPE);
+        int columnsQsLandscape = Settings.Secure.getInt(resolver,
+                Settings.Secure.QS_COLUMNS_LANDSCAPE, 3);
+        mQsColumnsLandscape.setValue(columnsQsLandscape);
+        mQsColumnsLandscape.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -86,10 +94,15 @@ public class QuickSettings extends SettingsPreferenceFragment
             Settings.Secure.putInt(resolver,
                     Settings.Secure.QS_ROWS_LANDSCAPE, intValue);
             return true;
-        } else if (preference == mQsColumns) {
+        } else if (preference == mQsColumnsPortrait) {
             intValue = (Integer) newValue;
             Settings.Secure.putInt(resolver,
-                    Settings.Secure.QS_COLUMNS, intValue);
+                    Settings.Secure.QS_COLUMNS_PORTRAIT, intValue);
+            return true;
+        } else if (preference == mQsColumnsLandscape) {
+            intValue = (Integer) newValue;
+            Settings.Secure.putInt(resolver,
+                    Settings.Secure.QS_COLUMNS_LANDSCAPE, intValue);
             return true;
         }
         return false;
