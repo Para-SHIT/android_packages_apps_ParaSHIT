@@ -61,6 +61,12 @@
             settings:units=""
             android:persistent="false" />
 
+        <in.parashit.preference.SystemSettingSwitchPreference
+            android:key="qs_quickbar_scroll_enabled"
+            android:title="@string/qqs_scroll_title"
+            android:summary="@string/qqs_scroll_summary"
+            android:defaultValue="false"/>
+
         <in.parashit.preference.SecureSettingSwitchPreference
             android:key="qs_bt_easy_toggle"
             android:title="@string/qs_bt_easy_toggle_title"
