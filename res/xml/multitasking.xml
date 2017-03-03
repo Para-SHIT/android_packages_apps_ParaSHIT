@@ -33,4 +33,10 @@
         android:layout="@layout/preference_omniswitch"
         android:fragment="in.parashit.fragments.OmniSwitch" />
 
+    <PreferenceScreen
+        android:key="slim_recents"
+        android:title="@string/slim_recents_title"
+        android:layout="@layout/preference_slim_recents"
+        android:fragment="in.parashit.fragments.SlimRecents" />
+
 </PreferenceScreen>
