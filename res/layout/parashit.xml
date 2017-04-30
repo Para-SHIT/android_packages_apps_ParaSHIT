@@ -26,6 +26,7 @@
 
     <in.parashit.PagerSlidingTabStrip
         android:id="@+id/tabs"
+        android:background="@color/ps_tab_background_color"
         android:layout_width="match_parent"
         android:layout_height="48dp" />
 
