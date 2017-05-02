@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 The ParaSHIT Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="24.0dp"
+        android:height="24.0dp"
+        android:viewportWidth="24.0"
+        android:viewportHeight="24.0"
+        android:tint="?android:attr/colorAccent">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M10.41 1.031C10.4591 2.553 9.6277 3.764 8.344 4.042 7.374 4.248 6.286 3.887 5.428 3.073 4.57 3.706 3.807 4.46 3.164 5.31 4.417 6.686 4.492 8.513 3.339 9.557 2.761 10.08 1.942 10.34 1.047 10.28c-0.1812 1.126 -0.1758 2.237 -0.01986 3.284 1.531 -0.0574 2.753 0.7753 3.031 2.066 0.2085 0.9791 -0.16 2.076 -0.9866 2.937 0.6411 0.8701 1.406 1.642 2.27 2.291 1.378 -1.296 3.24 -1.392 4.299 -0.2211 0.5268 0.5851 0.7864 1.418 0.7248 2.327 1.081 0.164 2.148 0.1565 3.152 0.01154 -0.04175 -1.514 0.7885 -2.716 2.066 -2.992 0.9768 -0.2079 2.071 0.1582 2.931 0.9811 0.9161 -0.6659 1.725 -1.468 2.398 -2.379 -1.17 -1.043 -1.47 -2.528 -0.7402 -3.659 0.5507 -0.8491 1.603 -1.366 2.811 -1.38 0.1491 -1.058 0.1335 -2.111 -0.01121 -3.092 -1.87 -0.08 -3.22 -1.324 -3.15 -2.883 0.04 -0.772 0.44 -1.533 1.1 -2.128 -0.63 -0.864 -1.38 -1.633 -2.23 -2.282 -1.37 1.251 -3.2 1.326 -4.24 0.173 -0.52 -0.578 -0.78 -1.398 -0.73 -2.295 -1.14 -0.1798 -2.26 -0.1736 -3.32 -0.014zm1.588 4.284c3.692 0.0000428 6.685 2.993 6.685 6.685 -0.0027 1.261 -0.362 2.495 -1.036 3.56L14.57 12.483c0.1994 -0.4702 0.3023 -0.9757 0.3025 -1.486 0.000163 -2.105 -1.706 -3.811 -3.81 -3.811 -0.5276 0.00087 -1.049 0.1113 -1.532 0.3243l2.34 2.341 -0.17 1.572 -1.703 0.3 -2.367 -2.368c-0.2472 0.5133 -0.3762 1.076 -0.3775 1.645 0.0000083 2.104 1.706 3.81 3.81 3.81 0.4845 -0.000699 0.9644 -0.09379 1.414 -0.2743l3.107 3.107c-1.072 0.6817 -2.315 1.044 -3.585 1.045 -3.692 -0.000043 -6.685 -2.993 -6.685 -6.685 0.0000429 -3.692 2.993 -6.685 6.685 -6.685z" />
+</vector>

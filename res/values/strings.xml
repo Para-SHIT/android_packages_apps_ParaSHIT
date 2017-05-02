@@ -20,12 +20,17 @@
 
     <!-- General strings -->
     <string name="parashit_summary_title">Customize your device</string>
+    <string name="qs_settings_title">Quick settings</string>
 
     <!-- Tabs -->
     <string name="ui_tab">Interface</string>
     <string name="system_tab">System</string>
     <string name="multitasking_tab">Multi-Tasking</string>
     <string name="misc_tab">Miscellaneous</string>
+
+    <!-- Categories -->
+    <string name="qs_header_category">Header options</string>
+    <string name="qs_tiles_toggles_category">Tiles &amp; toggles</string>
 
     <!-- Color Picker -->
     <string name="press_color_to_apply">Press on color below to apply</string>
