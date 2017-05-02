@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  Copyright (C) 2014-2016 The Dirty Unicorns Project
-                (C) 2017 The ParaSHIT Project
+<!--  Copyright (C) 2017 The ParaSHIT Project
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -18,13 +17,6 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/system_tab"
-    android:layout="@layout/tab">
-
-    <PreferenceScreen
-        android:key="animations_settings"
-        android:title="@string/animations_settings_title"
-        android:layout="@layout/preference_animations"
-        android:fragment="in.parashit.fragments.Animations" />
+    android:title="@string/animations_settings_title" >
 
 </PreferenceScreen>

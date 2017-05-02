@@ -22,6 +22,7 @@
     <string name="parashit_summary_title">Customize your device</string>
     <string name="qs_settings_title">Quick settings</string>
     <string name="recents_settings_title">Recents</string>
+    <string name="animations_settings_title">Animations</string>
 
     <!-- Tabs -->
     <string name="ui_tab">Interface</string>
