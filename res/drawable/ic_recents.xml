@@ -22,9 +22,5 @@
         android:tint="?android:attr/colorAccent">
     <path
         android:fillColor="#FFFFFFFF"
-        android:pathData="M6.046
-2.491v4.216h-0.688v4.903h-0.69v9.902h14.66v-9.9h-0.69v-4.903h-0.69v-4.216zm0.8732
-0.431h1.611v1.302h-1.611zm-0.313 1.907h10.78v1.878h-10.78zm-0.274
-2.359h1.797v1.451h-1.797zm-0.35 2.127h12.04v2.295h-12.04zm-0.238
-2.825h1.984v1.6h-1.984zm-0.387 2.35h13.28v6.558h-13.28z" />
+        android:pathData="M4,4H20V20H4V4M6,8V18H18V8H6Z" />
 </vector>

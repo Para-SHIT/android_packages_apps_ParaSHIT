@@ -32,8 +32,8 @@ import com.android.settings.SettingsPreferenceFragment;
 public class MultiTasking extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
 
-    private static final String OMNISWITCH_RECENTS = "omniswitch_recents";
-    private static final String OMNISWITCH_PACKAGE = "org.omnirom.omniswitch";
+    private static final String KEY_OMNISWITCH = "omniswitch";
+    private static final String KEY_OMNISWITCH_PACKAGE_NAME = "org.omnirom.omniswitch";
 
     private PreferenceScreen mOmniSwitch;
 
@@ -50,7 +50,7 @@ public class MultiTasking extends SettingsPreferenceFragment
         ContentResolver resolver = getActivity().getContentResolver();
         PreferenceScreen prefSet = getPreferenceScreen();
 
-        mOmniSwitch = (PreferenceScreen) findPreference(OMNISWITCH_RECENTS);
+        mOmniSwitch = (PreferenceScreen) findPreference(KEY_OMNISWITCH);
         if (mOmniSwitch != null && !isOmniSwitchInstalled()) {
             prefSet.removePreference(mOmniSwitch);
         }
@@ -71,6 +71,6 @@ public class MultiTasking extends SettingsPreferenceFragment
     }
 
     private boolean isOmniSwitchInstalled() {
-        return PackageUtils.isAvailableApp(OMNISWITCH_PACKAGE, getActivity());
+        return PackageUtils.isAvailableApp(KEY_OMNISWITCH_PACKAGE_NAME, getActivity());
     }
 }

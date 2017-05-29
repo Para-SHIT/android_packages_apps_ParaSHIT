@@ -23,6 +23,7 @@
     <string name="qs_settings_title">Quick settings</string>
     <string name="recents_settings_title">Recents</string>
     <string name="animations_settings_title">Animations</string>
+    <string name="omniswitch_settings_title">OmniSwitch</string>
 
     <!-- Tabs -->
     <string name="ui_tab">Interface</string>
@@ -244,7 +245,6 @@
 
     <!-- Immersive Recents -->
     <string name="immersive_recents_title">Immersive recents</string>
-    <string name="immersive_recents_summary">Change the view of the recents screen</string>
     <string name="immersive_recents_dialog_title">Select recents view</string>
     <string name="immersive_recents_default">Default</string>
     <string name="immersive_recents_fullscreen">Fullscreen</string>
@@ -266,7 +266,8 @@
     <string name="systemui_recents_mem_display_summary">Enable/disable RAM bar in recent app view</string>
 
     <!-- OmniSwitch Recents -->
-    <string name="omniswitch_recents_title">OmniSwitch</string>
+    <string name="aosp_recents_title">AOSP recents</string>
+    <string name="omniswitch_recents_title">OmniSwitch recents</string>
     <string name="recents_use_omniswitch_title">Use for a recents alternative</string>
     <string name="recents_use_omniswitch_summary">Use OmniSwitch instead of the default recents view</string>
     <string name="omniswitch_start_settings_title">OmniSwitch settings</string>

@@ -22,21 +22,19 @@
     android:layout="@layout/tab">
 
     <PreferenceScreen
+        android:key="omniswitch"
+        android:title="@string/omniswitch_settings_title"
+        android:layout="@layout/preference_omniswitch" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="org.omnirom.omniswitch"
+            android:targetClass="org.omnirom.omniswitch.SettingsActivity" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
         android:key="recents_settings"
         android:title="@string/recents_settings_title"
         android:layout="@layout/preference_recents"
         android:fragment="in.parashit.fragments.Recents" />
-
-    <PreferenceScreen
-        android:key="omniswitch_recents"
-        android:title="@string/omniswitch_recents_title"
-        android:layout="@layout/preference_omniswitch"
-        android:fragment="in.parashit.fragments.OmniSwitch" />
-
-    <PreferenceScreen
-        android:key="slim_recents"
-        android:title="@string/slim_recents_title"
-        android:layout="@layout/preference_slim_recents"
-        android:fragment="in.parashit.fragments.SlimRecents" />
 
 </PreferenceScreen>
