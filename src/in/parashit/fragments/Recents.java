@@ -39,7 +39,6 @@ import com.android.settings.SettingsPreferenceFragment;
 public class Recents extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
 
-    private static final String IMMERSIVE_RECENTS = "immersive_recents";
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
     private static final String RECENTS_USE_OMNISWITCH = "recents_use_omniswitch";
     private static final String OMNISWITCH_START_SETTINGS = "omniswitch_start_settings";
@@ -51,7 +50,6 @@ public class Recents extends SettingsPreferenceFragment
     private static final String CATEGORY_OMNI_RECENTS = "omni_recents";
     private static final String CATEGORY_SLIM_RECENTS = "slim_recents";
 
-    private ListPreference mImmersiveRecents;
     private ListPreference mRecentsClearAllLocation;
     private Preference mOmniSwitchSettings;
     private PreferenceCategory mOmniRecents;
@@ -77,12 +75,6 @@ public class Recents extends SettingsPreferenceFragment
         mStockRecents = (PreferenceCategory) findPreference(CATEGORY_STOCK_RECENTS);
         mOmniRecents = (PreferenceCategory) findPreference(CATEGORY_OMNI_RECENTS);
         mSlimRecents = (PreferenceCategory) findPreference(CATEGORY_SLIM_RECENTS);
-
-        mImmersiveRecents = (ListPreference) findPreference(IMMERSIVE_RECENTS);
-        mImmersiveRecents.setValue(String.valueOf(Settings.System.getInt(
-                resolver, Settings.System.IMMERSIVE_RECENTS, 0)));
-        mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
-        mImmersiveRecents.setOnPreferenceChangeListener(this);
 
         mRecentsClearAllLocation = (ListPreference) findPreference(RECENTS_CLEAR_ALL_LOCATION);
         int location = Settings.System.getIntForUser(resolver,
@@ -113,13 +105,7 @@ public class Recents extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mImmersiveRecents) {
-            Settings.System.putInt(resolver, Settings.System.IMMERSIVE_RECENTS,
-                    Integer.parseInt((String) newValue));
-            mImmersiveRecents.setValue((String) newValue);
-            mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
-            return true;
-        } else if (preference == mRecentsClearAllLocation) {
+        if (preference == mRecentsClearAllLocation) {
             int location = Integer.parseInt((String) newValue);
             int index = mRecentsClearAllLocation.findIndexOfValue((String) newValue);
             Settings.System.putIntForUser(resolver,
