@@ -60,4 +60,12 @@
         settings:units=""
         android:persistent="false" />
 
+    <in.parashit.preference.SeekBarPreference
+        android:key="smartbar_custom_icon_size"
+        android:title="@string/smartbar_custom_icon_size_title"
+        android:max="100"
+        settings:min="10"
+        settings:units="%"
+        android:persistent="false" />
+
 </PreferenceScreen>
