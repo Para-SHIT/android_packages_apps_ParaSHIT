@@ -291,11 +291,11 @@
     <string name="omniswitch_start_settings_title">OmniSwitch settings</string>
     <string name="omniswitch_start_settings_summary">View the settings for OmniSwitch</string>
     <string name="omniswitch_first_time_title">Warning</string>
-    <string name="omniswitch_first_time_message">If using OmniSwitch as recents alterative, make sure you have OmniSwitch enabled</string>
+    <string name="omniswitch_first_time_message">If using OmniSwitch as recents alternative, make sure you have OmniSwitch enabled</string>
 
     <!-- Slim Recents panel -->
     <string name="slim_recents_title">Slim recents</string>
-    <string name="use_slim_recents_title">Use for recents</string>
+    <string name="use_slim_recents_title">Use for a recents alternative</string>
     <string name="use_slim_recents_summary">Use Slim recents instead of the default recents view</string>
     <string name="slim_recents_settings_title">Slim recents settings</string>
     <string name="slim_recents_settings_summary">View the settings for slim recents</string>

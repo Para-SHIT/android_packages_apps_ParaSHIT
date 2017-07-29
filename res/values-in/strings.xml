@@ -234,7 +234,7 @@
   <string name="omniswitch_first_time_message">Jika menggunakan OmniSwitch sebagai alternatif recent, pastikan anda sudah menghidupkan OmniSwitch</string>
   <!-- Slim Recents panel -->
   <string name="slim_recents_title">Recent Slim</string>
-  <string name="use_slim_recents_title">Gunakan untuk recent</string>
+  <string name="use_slim_recents_title">Gunakan untuk alternatif recent</string>
   <string name="use_slim_recents_summary">Gunakan recent Slim sebagai ganti tampilan recent standar</string>
   <string name="slim_recents_settings_title">Setelan recent Slim</string>
   <string name="slim_recents_settings_summary">Lihat setelan untuk recent slim</string>
