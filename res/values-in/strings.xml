@@ -250,9 +250,7 @@
   <string name="recent_panel_show_topmost_summary">Tidak mengecualikan tugas teratas pada tampilan Recent</string>
   <string name="recent_panel_bg_color_title">Warna latar belakang panel</string>
   <string name="recent_card_bg_color_title">Warna latar belakang kartu</string>
-  <string name="recent_reset_title">Atur ulang ke warna bawaan</string>
-  <string name="recent_reset_confirm">Apakah Anda yakin ingin mengatur ulang warna recent Slim ke warna bawaan?</string>
-  <string name="default_auto_string">Standar (berdasar aplikasi)</string>
+  <string name="default_auto_string">Standar (bawaan aplikasi)</string>
   <string name="slim_icon_pack_title">Paket Ikon</string>
   <string name="slim_icon_pack_summary">Terapkan paket ikon khusus untuk aplikasi di panel</string>
   <string name="no_iconpacks_summary">Tidak ada paket ikon terpasang</string>
@@ -336,7 +334,6 @@
   <string name="blur_mixed_color">Filter warna gambar campuran</string>
   <string name="blur_colors_notice">Apa yang warna-warna ini lakukan?</string>
   <string name="blur_colors_notice_summary">Warna-warna ini adalah yang mewarnai latar belakang blur. Bukannya biasa abu-abu, sekarang anda dapat memilih warna dengan cara yang anda suka. \nAda tiga filter warna: satu digunakan untuk latar belakang yang terang, satu digunakan untuk latar belakang yang gelap dan satu digunakan untuk latar belakang terang/gelap. \nJadi bagaimana warna bekerja? \nSederhana, seperti namanya, filter terang akan digunakan untuk latar belakang yang terang, filter gelap untuk latar belakang yang gelap dan filter campuran yang akan digunakan untuk latar belakang tidak terlalu gelap tapi tidak terlalu terang. \nWarna ini yang digunakan untuk kedua latar belakang blur: Status bar dan Recent aplikasi</string>
-  <string name="blur_colors_reset_message">Atur ulang semua warna ke standar?</string>
   <string name="blur_notice">Peringatan</string>
   <string name="blur_notice_summary">Personalisasi blur otomatis dimatikan saat tampilan kunci layar!</string>
   <string name="blur_expstatus_cat">Status bar diperluas</string>

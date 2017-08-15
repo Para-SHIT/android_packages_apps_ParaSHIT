@@ -311,8 +311,6 @@
     <string name="recent_panel_show_topmost_summary">Don\'t exclude the topmost task in recents view</string>
     <string name="recent_panel_bg_color_title">Panel background color</string>
     <string name="recent_card_bg_color_title">Card background color</string>
-    <string name="recent_reset_title">Reset to stock color</string>
-    <string name="recent_reset_confirm">Are you sure you want to reset Slim Recent to stock color?</string>
     <string name="default_auto_string">Default (app based)</string>
     <string name="slim_icon_pack_title">Icon Pack</string>
     <string name="slim_icon_pack_summary">Apply a custom icon pack for apps in the panel</string>
@@ -404,7 +402,6 @@
     <string name="blur_mixed_color">Mixed image color filter</string>
     <string name="blur_colors_notice">What are these colors doing?</string>
     <string name="blur_colors_notice_summary">These colors are the ones tinting the BlurBackground. Instead of the normal Grey, you can now choose the colors in the way you like.\nThere are three color filters: One used for light backgrounds, one used for Dark backgrounds and one used for light/dark backgrounds.\nSo how these colors work?\nSimple, as the titles say, the Light filter will be used for Lighter backgrounds, Dark filter for dark backgrounds and the mixed filter one will be used for backgrounds not too dark but neither too light.\nThese colors are used for both BlurBackgrounds: StatusBar and RecentsApps window</string>
-    <string name="blur_colors_reset_message">Reset all colors to default?</string>
     <string name="blur_notice">Notice</string>
     <string name="blur_notice_summary">Blur personalizations are automatically disabled during Keyguard view!</string>
     <string name="blur_expstatus_cat">Expanded status bar</string>

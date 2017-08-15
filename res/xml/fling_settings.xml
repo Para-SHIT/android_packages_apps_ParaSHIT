@@ -150,7 +150,7 @@
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="eos_fling_ripple_color"
             android:title="@string/fling_ripple_color"
-            android:defaultValue="0xffffff"
+            android:defaultValue="0xffffffff"
             android:dependency="eos_fling_show_ripple" />
 
         <SwitchPreference
@@ -161,7 +161,7 @@
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="eos_fling_trails_color"
             android:title="@string/fling_trails_color_title"
-            android:defaultValue="0xffffff"
+            android:defaultValue="0xffffffff"
             android:dependency="eos_fling_trails_enable" />
 
         <in.parashit.preference.SeekBarPreference
