@@ -31,17 +31,17 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.AdapterView.OnItemClickListener;
 
+import com.android.internal.utils.du.ActionHandler;
 import com.android.settings.R;
 
 import java.io.InputStream;
@@ -124,7 +124,7 @@ public class IconPickerActivity extends Activity
     private void sendCancelResultAndFinish() {
         Intent intent = new Intent(INTENT_ICON_PICKER);
         intent.putExtra("result", Activity.RESULT_CANCELED);
-        sendBroadcastAsUser(intent, UserHandle.CURRENT);
+        ActionHandler.dispatchNavigationEditorResult(intent);
         setResult(Activity.RESULT_CANCELED);
         finish();
     }
@@ -142,7 +142,7 @@ public class IconPickerActivity extends Activity
                 resultIntent.putExtra("icon_data_type", iconType);
                 resultIntent.putExtra("icon_data_package", iconPackage);
                 resultIntent.putExtra("icon_data_name", iconName);
-                sendBroadcastAsUser(resultIntent, UserHandle.CURRENT);
+                ActionHandler.dispatchNavigationEditorResult(resultIntent);
                 setResult(RESULT_OK, resultIntent);
                 finish();
             } else {

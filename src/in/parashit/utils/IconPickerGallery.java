@@ -24,9 +24,9 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.UserHandle;
 import android.widget.Toast;
 
+import com.android.internal.utils.du.ActionHandler;
 import com.android.internal.utils.du.DUActionUtils;
 import com.android.internal.utils.du.ImageHelper;
 import com.android.settings.R;
@@ -78,7 +78,7 @@ public class IconPickerGallery extends Activity {
                             resultIntent.setAction(INTENT_GALLERY_PICKER);
                             resultIntent.putExtra("result", Activity.RESULT_OK);
                             resultIntent.putExtra("uri", newUri.toString());
-                            sendBroadcastAsUser(resultIntent, UserHandle.CURRENT);
+                            ActionHandler.dispatchNavigationEditorResult(resultIntent);
                             setResult(RESULT_OK, resultIntent);
                             finish();
                         }
@@ -106,7 +106,7 @@ public class IconPickerGallery extends Activity {
     private void sendCancelResultAndFinish() {
         Intent intent = new Intent(INTENT_GALLERY_PICKER);
         intent.putExtra("result", Activity.RESULT_CANCELED);
-        sendBroadcastAsUser(intent, UserHandle.CURRENT);
+        ActionHandler.dispatchNavigationEditorResult(intent);
         setResult(Activity.RESULT_CANCELED);
         finish();
     }

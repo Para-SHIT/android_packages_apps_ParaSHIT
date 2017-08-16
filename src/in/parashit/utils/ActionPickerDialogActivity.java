@@ -27,8 +27,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.UserHandle;
 
+import com.android.internal.utils.du.ActionHandler;
 import com.android.internal.utils.du.Config.ActionConfig;
 import com.android.settings.R;
 
@@ -130,7 +130,7 @@ public class ActionPickerDialogActivity extends Activity
         intent.putExtra("action_string", result);
         ActionConfig actionConfig = new ActionConfig(this, result);
         intent.putExtra("action_config", actionConfig);
-        sendBroadcastAsUser(intent, UserHandle.CURRENT);
+        ActionHandler.dispatchNavigationEditorResult(intent);
         setResult(Activity.RESULT_OK, intent);
         finish();
     }
@@ -138,7 +138,7 @@ public class ActionPickerDialogActivity extends Activity
     private void sendCancelResultAndFinish() {
         Intent intent = new Intent("intent_action_action_picker");
         intent.putExtra("result", Activity.RESULT_CANCELED);
-        sendBroadcastAsUser(intent, UserHandle.CURRENT);
+        ActionHandler.dispatchNavigationEditorResult(intent);
         setResult(Activity.RESULT_CANCELED);
         finish();
     }
