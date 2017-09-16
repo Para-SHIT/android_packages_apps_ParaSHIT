@@ -23,6 +23,8 @@
   <string name="recents_settings_title">Panel recent</string>
   <string name="animations_settings_title">Animasi</string>
   <string name="omniswitch_settings_title">OmniSwitch</string>
+  <string name="various_shit_title">Berbagai kotoran</string>
+  <string name="print_restart">Mulai ulang</string>
   <!-- Tabs -->
   <string name="ui_tab">Antarmuka</string>
   <string name="system_tab">Sistem</string>
@@ -31,6 +33,11 @@
   <!-- Categories -->
   <string name="qs_header_category">Pilihan Header</string>
   <string name="qs_tiles_toggles_category">Tiles &amp; toggles</string>
+  <string name="qs_header_icons_category">Ikon-ikon Header</string>
+  <!-- SystemUI restart prompt -->
+  <string name="systemui_restart_title">PERINGATAN</string>
+  <string name="systemui_restart_message">SystemUI akan dimulai ulang sehingga setelan yang dipilih bisa diterapkan dengan benar.</string>
+  <string name="restarting_ui">Memulai ulang UI\u2026</string>
   <!-- Color Picker -->
   <string name="press_color_to_apply">Tekan pada warna di bawah ini untuk menerapkan</string>
   <string name="set">Atur</string>
@@ -116,11 +123,11 @@
   <string name="fling_longpress_summary">Menambah atau mengurangi waktu yang dibutuhkan untuk melaksanakan menekan agak lama</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_title">Tentang Pulse</string>
-  <string name="pulse_help_policy_notice_summary">Pulse adalah grafis audio equalizer yang brilian pada panel navigasi ketika memainkan musik. Pulse tidak bekerja dengan beberapa sumber audio ketika mendengarkan di speaker perangkat</string>
+  <string name="pulse_help_policy_notice_summary">Pulse adalah equalizer grafis audio yang brilian pada panel navigasi ketika memainkan musik. Pulse tidak bekerja dengan beberapa sumber audio ketika mendengarkan di speaker perangkat</string>
   <string name="pulse_settings">Pulse</string>
   <string name="pulse_settings_summary">Grafis audio equaliser bar navigasi</string>
-  <string name="fling_show_pulse_title">Show Pulse</string>
-  <string name="fling_show_pulse_summary">Audio graphic equalizer on the navigation bar</string>
+  <string name="fling_show_pulse_title">Tampilkan Pulse</string>
+  <string name="fling_show_pulse_summary">Equalizer grafis audio pada panel navigasi</string>
   <string name="pulse_render_mode_title">Mode penjabaran</string>
   <string name="pulse_render_mode_fading_bars">Blok memudar</string>
   <string name="pulse_render_mode_solid_lines">Garis-garis solid</string>
@@ -180,6 +187,12 @@
   <string name="smartbar_config_backup_error_toast">Kesalahan menyimpan profil SmartBar</string>
   <string name="smartbar_config_restore_error_toast">Kesalahan memulihkan profil SmartBar</string>
   <string name="navbar_buttons_alpha_title">Transparansi tombol</string>
+  <string name="smartbar_longpress_delay_title">Tunda tekan lama tombol</string>
+  <string name="smartbar_longpress_delay_summary">Tetapkan berapa lama sistem akan menunggu sebelum memicu tindakan tekan lama</string>
+  <string name="smartbar_longpress_delay_default">Tunda standar (cepat)</string>
+  <string name="smartbar_longpress_delay_normal">Tunda normal</string>
+  <string name="smartbar_longpress_delay_long">Tunda lama</string>
+  <string name="smartbar_custom_icon_size_title">Penskalaan ikon khusus</string>
   <!-- WiFi easy toggle  -->
   <string name="qs_wifi_easy_toggle_title">Hidup/matikan WiFi mudah</string>
   <string name="qs_wifi_easy_toggle_summary">Satu kali klik akan menghidupkan atau mematikan WiFi sebagai ganti membawa Anda pada tampilan detail</string>
@@ -210,6 +223,17 @@
   <string name="custom_header_provider_title">Penyedia Header</string>
   <string name="custom_header_browse_title">Telusuri Header yang terpasang</string>
   <string name="custom_header_browse_summary">Tekan lama pada setiap gambar untuk digunakan pada mode statis</string>
+  <!-- QS Header Icons -->
+  <string name="qs_settings_icon_title">Pintasan setelan</string>
+  <string name="qs_settings_icon_summary">Hidupkan pintasan setelan di Header</string>
+  <string name="qs_settings_expanded_title">Pintasan setelan diperluas</string>
+  <string name="qs_settings_expanded_summary">Hanya hidupkan pintasan setelan saat diperluas</string>
+  <string name="qs_edit_title">Ikon sunting</string>
+  <string name="qs_edit_summary">Hidupkan ikon sunting ubin di Header</string>
+  <string name="qs_multiuser_switch_title">Multi-pengguna beralih</string>
+  <string name="qs_multiuser_switch_summary">Hidupkan multi-pengguna beralih di Header</string>
+  <string name="qs_expand_indicator_title">Indikator diperluas</string>
+  <string name="qs_expand_indicator_summary">Hidupkan indikator diperluas (^) di Header</string>
   <!-- Recents settings -->
   <string name="show_clear_all_recents_button_title">FAB Hapus Semua</string>
   <string name="show_clear_all_recents_button_summary_on">FAB Hapus Semua terlihat</string>
