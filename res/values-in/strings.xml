@@ -229,7 +229,7 @@
   <string name="qs_settings_expanded_title">Pintasan setelan diperluas</string>
   <string name="qs_settings_expanded_summary">Hanya hidupkan pintasan setelan saat diperluas</string>
   <string name="qs_edit_title">Ikon sunting</string>
-  <string name="qs_edit_summary">Hidupkan ikon sunting ubin di Header</string>
+  <string name="qs_edit_summary">Hidupkan ikon sunting Tile di Header</string>
   <string name="qs_multiuser_switch_title">Multi-pengguna beralih</string>
   <string name="qs_multiuser_switch_summary">Hidupkan multi-pengguna beralih di Header</string>
   <string name="qs_expand_indicator_title">Indikator diperluas</string>
@@ -369,4 +369,7 @@
   <string name="blurred_scale_summary">Kualitas gambar</string>
   <string name="blurred_radius">Radius blur</string>
   <string name="blurred_radius_summary">Kuantitas blur</string>
+  <!-- QS Tiles single tap to add/remove -->
+  <string name="qs_tile_single_tap_title">QS Tile sekali ketuk</string>
+  <string name="qs_tile_single_tap_summary">Menambah atau menghapus QS Tile dengan mengetuk sekali pada Tile di penyesuai</string>
 </resources>

@@ -17,7 +17,6 @@
  -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <!-- General strings -->
     <string name="parashit_summary_title">Customize your device</string>
     <string name="qs_settings_title">Quick settings</string>
@@ -414,4 +413,7 @@
     <string name="blurred_radius">Blur radius</string>
     <string name="blurred_radius_summary">Amount of blur</string>
 
+    <!-- QS Tiles single tap to add/remove -->
+    <string name="qs_tile_single_tap_title">QS tile single tap</string>
+    <string name="qs_tile_single_tap_summary">Add or remove qs tile by single tapping on the tile in customizer</string>
 </resources>

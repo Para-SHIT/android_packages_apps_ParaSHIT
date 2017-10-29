@@ -120,6 +120,12 @@
             android:summaryOff="@string/qs_tile_labels_summaryOff"
             android:defaultValue="true" />
 
+        <in.parashit.preference.SystemSettingSwitchPreference
+            android:key="quick_tile_add"
+            android:title="@string/qs_tile_single_tap_title"
+            android:summary="@string/qs_tile_single_tap_summary"
+            android:defaultValue="false"/>
+
         <in.parashit.preference.SecureSettingSwitchPreference
             android:key="qs_bt_easy_toggle"
             android:title="@string/qs_bt_easy_toggle_title"
